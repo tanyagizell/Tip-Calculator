@@ -41,7 +41,6 @@ public class TipCalculatorActivity extends ActionBarActivity {
         setContentView(R.layout.activity_tip_calculator);
 
         //init variables
-        background = (RelativeLayout) findViewById(R.id.background);
         btnCalc = (Button) findViewById(R.id.btnCalculate);
         edtTxtAmount = (EditText) findViewById(R.id.edtBillAmount);
         chkBoxRnd = (CheckBox) findViewById(R.id.chkRound);
@@ -56,11 +55,10 @@ public class TipCalculatorActivity extends ActionBarActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String text = s.toString();
+                //check if the content is a number
                 if (text.matches("-?\\d+(\\.\\d+)?")){
                     billAmount = Double.parseDouble(text);
                 }
-
-                Log.d(TAG,text);
             }
 
             @Override
