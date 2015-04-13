@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TipCalculatorActivity"
+    android:id="@+id/background">
+
+    <TextView
+        android:text="Bill Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="29dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/txtBillAmount"
+    />
+
+    <EditText
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:inputType="text"
+        android:id="@+id/edtBillAmount"
+    />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Round to nearest dollar"
+        android:textSize="25dp"
+        android:id="@+id/chkRound"
+        android:layout_below="@+id/edtBillAmount"
+        android:layout_marginTop="40dp"
+    />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Calculate"
+        android:textSize="25dp"
+        android:textAllCaps="false"
+        android:id="@+id/btnCalculate"
+        android:layout_below="@+id/chkRound"
+        android:layout_marginTop="25dp"
+    />
+
+    <TextView
+        android:text="Tip:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:id="@+id/txtTipResult"
+        android:layout_below="@+id/btnCalculate"
+        android:layout_marginTop="50dp"
+
+    />
+
+
+
+</RelativeLayout>
